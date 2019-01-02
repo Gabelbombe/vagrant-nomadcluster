@@ -1,4 +1,4 @@
-# Vagrant Nomad Demo
+# A Vagrant Nomad use case 
 
 This Vagrantfile and associated Nomad configuration files are meant
 to be used along with the
@@ -26,5 +26,3 @@ Available commands are:
 
 
 To learn more about starting Nomad see the [official site](https://nomadproject.io).
-
-A Vagrant installation of HashiCorps Nomad

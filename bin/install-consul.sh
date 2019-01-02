@@ -1,10 +1,13 @@
 #!/bin/bash
-
-echo -e "[info] Installing Consul..."
 CONSUL_VERSION=1.4.0
-curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip > consul.zip
-unzip /tmp/consul.zip
+
+echo -e "[info] Installing Consul v${CONSUL_VERSION}..."
+cd /tmp/
+curl -sSL https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip -o consul.zip
+unzip consul.zip
+
 sudo install consul /usr/bin/consul
+
 (
 cat <<-EOF
   [Unit]

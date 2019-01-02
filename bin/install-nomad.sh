@@ -1,9 +1,7 @@
 #!/bin/bash
-
-# Packages required for nomad & consul
-sudo apt-get install unzip curl vim -y
-echo -e "[info] Installing Nomad..."
 NOMAD_VERSION=0.8.6
+
+echo -e "[info] Installing Nomad v${NOMAD_VERSION}..."
 cd /tmp/
 curl -sSL https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_linux_amd64.zip -o nomad.zip
 unzip nomad.zip
