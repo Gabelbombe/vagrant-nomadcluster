@@ -13,7 +13,7 @@ bind_addr = "127.0.0.1"
 # Set the bind address
 addresses {
     http = "__IP_ADDRESS__"
-    rpc = "__IP_ADDRESS__"
+    rpc  = "__IP_ADDRESS__"
     serf = "__IP_ADDRESS__"
 }
 
@@ -29,7 +29,7 @@ advertise {
 # Network ports can be also set. The default values are:
 # ports {
 #   http = 4646
-#   rpc = 4647  # only server nodes
+#   rpc  = 4647  # only server nodes
 #   serf = 4648 # only server nodes
 # }
 
