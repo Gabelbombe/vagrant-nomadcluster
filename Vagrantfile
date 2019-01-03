@@ -5,6 +5,7 @@ $script = <<SCRIPT
 # Update apt and get dependencies
 sudo apt-get update
 sudo apt-get install -y unzip curl wget vim
+
 # Download Nomad
 echo Fetching Nomad...
 cd /tmp/
@@ -16,6 +17,7 @@ sudo chmod +x nomad
 sudo mv nomad /usr/bin/nomad
 sudo mkdir -p /etc/nomad.d
 sudo chmod a+w /etc/nomad.d
+
 # Install Consul
 echo Fetching Consul...
 cd /tmp/
