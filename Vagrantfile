@@ -1,6 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+SERVERS = 3
+CLIENTS = 1
+
+SERVERS_IP = "192.68.50.1"
+CLIENTS_IP = "192.68.60.1"
+
 $script = <<SCRIPT
 # Update apt and get dependencies
 sudo apt-get update
@@ -19,9 +25,9 @@ Vagrant.configure(2) do | config |
   config.vm.provision "docker"
 
   # Servers
-  1.upto(3) do | i |
+  1.upto(SERVERS) do | i |
     vmName = "nomad-server#{i}"
-    vmIP = "192.68.50.1#{i}"
+    vmIP = "#{SERVER_IP}#{i}"
 
     config.vm.define vmName do | server |
       #server.vm.box = "ubuntu/trusty64"
@@ -30,10 +36,11 @@ Vagrant.configure(2) do | config |
     end
   end
 
-  # Clients
-  1.upto(1) do | i |
+
+   # Clients
+  1.upto(CLIENTS) do | i |
     vmName = "nomad-client#{i}"
-    vmIP = "192.68.60.1#{i}"
+    vmIP = "#{CLIENTS_IP}#{i}"
 
     config.vm.define vmName do | server |
       #server.vm.box = "ubuntu/trusty64"
