@@ -262,4 +262,4 @@ Note: the parameter "-address" should be also specified.
 
 Using Jobs is a good way to test that your Nomad cluster is working as expected.
 
-To learn more about Nomad please check the [Nomad Internals](nomad-internals/README.md) section and the [official site](https://www.nomadproject.io/).
+To learn more about Nomad please check the [Nomad Internals](./internals/README.md) section and the [official site](https://www.nomadproject.io/).
