@@ -26,11 +26,11 @@ PRIVATE_IP1=$3
 PRIVATE_IP2=$4
 PRIVATE_IP3=$5
 
-sed -i -- "s/__NODE_NAME__/$HOSTNAME/g" /vagrant/consul/config.json
-sed -i -- "s/__ENCRYPTION__/$ENCRYPT/g" /vagrant/consul/config.json
-sed -i -- "s/__PRIVATE_IP1__/$PRIVATE_IP1/g" /vagrant/consul/config.json
-sed -i -- "s/__PRIVATE_IP2__/$PRIVATE_IP2/g" /vagrant/consul/config.json
-sed -i -- "s/__PRIVATE_IP3__/$PRIVATE_IP3/g" /vagrant/consul/config.json
+sed -i -- "s/__NODE_NAME__/$HOSTNAME/g"       /vagrant/consul/config.json
+sed -i -- "s/__ENCRYPTION__/$ENCRYPT/g"       /vagrant/consul/config.json
+sed -i -- "s/__PRIVATE_IP1__/$PRIVATE_IP1/g"  /vagrant/consul/config.json
+sed -i -- "s/__PRIVATE_IP2__/$PRIVATE_IP2/g"  /vagrant/consul/config.json
+sed -i -- "s/__PRIVATE_IP3__/$PRIVATE_IP3/g"  /vagrant/consul/config.json
 
 [ "$#" -eq 6 ] && {
   PRIVATE_IP4=$6

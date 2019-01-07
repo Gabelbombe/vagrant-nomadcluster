@@ -27,10 +27,10 @@ Vagrant.configure(2) do | config |
   # Servers
   1.upto(SERVERS) do | i |
     vmName = "nomad-server#{i}"
-    vmIP = "#{SERVER_IP}#{i}"
+    vmIP = "#{SERVERS_IP}#{i}"
 
     config.vm.define vmName do | server |
-      #server.vm.box = "ubuntu/trusty64"
+      #server.vm.box = "ubuntu/xenial64"
       server.vm.hostname = vmName
       server.vm.network "private_network", ip: vmIP
     end
@@ -43,7 +43,7 @@ Vagrant.configure(2) do | config |
     vmIP = "#{CLIENTS_IP}#{i}"
 
     config.vm.define vmName do | server |
-      #server.vm.box = "ubuntu/trusty64"
+      #server.vm.box = "ubuntu/xenial64"
       server.vm.hostname = vmName
       server.vm.network "private_network", ip: vmIP
     end

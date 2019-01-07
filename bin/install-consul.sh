@@ -18,7 +18,7 @@ After=network-online.target
 [Service]
 Restart=on-failure
 ExecStart=/usr/bin/consul agent -dev
-ExecReload=/bin/kill -HUP $MAINPID
+ExecReload=/bin/kill -HUP \$MAINPID
 
 [Install]
 WantedBy=multi-user.target
@@ -35,3 +35,4 @@ for bin in cfssl cfssl-certinfo cfssljson ; do
 done
 
 nomad -autocomplete-install
+echo -e '\n\n'
